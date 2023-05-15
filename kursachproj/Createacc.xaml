@@ -1,0 +1,33 @@
+﻿<Page x:Class="kursachproj.Createacc"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursachproj"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Регистрация">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Label>Введите Имя:</Label>
+                <TextBox Width="150" Margin="42 0 0 0" Name="Name"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Label>Введите Логин:</Label>
+                <TextBox Width="150" Margin="32 0 0 0" Name="Login"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Label>Введите Пароль:</Label>
+                <TextBox Width="150" Margin="25 0 0 0" Name="Password"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <Label>Повтор пароля</Label>
+                <PasswordBox Width="150" Margin="34 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
+            </StackPanel>
+            <Button Content="Создать" Width="100" Background="LightGreen" Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"></Button>
+            <Button Content="Назад" Width="100" x:Name="btnBack" Click="BtnBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
