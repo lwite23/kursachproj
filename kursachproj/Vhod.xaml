@@ -1,0 +1,33 @@
+﻿<Page x:Class="kursachproj.Vhod"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursachproj"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+       Title="Вход">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="130"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Введите логин:" Grid.Column="1" Grid.Row="1" FontSize="20"></TextBlock>
+        <TextBlock Text="Введите пароль:" Grid.Column="1" Grid.Row="3" FontSize="20"></TextBlock>
+        <TextBox x:Name="txbLogin" Grid.Column="1" Grid.Row="2"></TextBox>
+        <PasswordBox x:Name="psbPassword" Grid.Column="1" Grid.Row="4"></PasswordBox>
+        <Button Content="Войти" Background="BlueViolet" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Left" Width="96" Click="Button_Click"/>
+        <Button Content="Регистрация" Grid.Column="1" Grid.Row="5" Margin="105,10,0,10" HorizontalAlignment="Left" Width="95" Click="Registration_Click"/>
+    </Grid>
+</Page>
