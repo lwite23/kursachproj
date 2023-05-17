@@ -45,6 +45,7 @@ namespace kursachproj
                 AppConnect.model0db.SaveChanges();
                 MessageBox.Show("Данные успешно добавлены!",
                     "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                AppFr.frameMain.GoBack();
             }
             catch
             {
