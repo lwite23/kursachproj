@@ -11,23 +11,23 @@
     <Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Calibri Bold">Введите Имя:</Label>
-                <TextBox Width="150" Margin="42 0 0 0" Name="Name"></TextBox>
+                <Label FontSize="23" FontFamily="Calibri Bold">Введите Имя:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="42 0 0 0" Name="Name"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Calibri Bold">Введите Логин:</Label>
-                <TextBox Width="150" Margin="32 0 0 0" Name="Login"></TextBox>
+                <Label FontSize="23" FontFamily="Calibri Bold">Введите Логин:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="25 0 0 0" Name="Login"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Calibri Bold">Введите Пароль:</Label>
-                <TextBox Width="150" Margin="25 0 0 0" Name="Password"></TextBox>
+                <Label FontSize="23" FontFamily="Calibri Bold">Введите Пароль:</Label>
+                <TextBox FontSize="25" Width="250" Height="40" Margin="12 0 0 0" Name="Password"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
-                <Label FontFamily="Calibri Bold">Повтор пароля</Label>
-                <PasswordBox Width="150" Margin="34 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
+                <Label FontSize="23" FontFamily="Calibri Bold">Повтор пароля</Label>
+                <PasswordBox FontSize="25" Width="250" Height="40" Margin="30 0 0 0" PasswordChanged="PasswordBox_PasswordChanged" Name="psbPass"></PasswordBox>
             </StackPanel>
-            <Button Content="Создать"  Width="150" Height="25" Background="LightGreen" Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"></Button>
-            <Button Content="Назад" Margin="0,10,0,0"  Width="150" Height="25" x:Name="btnBack" Click="BtnBack_Click"/>
+            <Button Content="Создать" FontSize="18" Width="200" Height="30" Background="WhiteSmoke" Name="btnRegIn" Click="BtnRegIn_Click" IsEnabled="False"></Button>
+            <Button Content="Назад" FontSize="18" Margin="0,10,0,0"  Width="200" Height="30" x:Name="btnBack" Click="BtnBack_Click"/>
         </StackPanel>
     </Grid>
 </Page>
