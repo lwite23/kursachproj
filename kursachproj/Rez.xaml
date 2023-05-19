@@ -1,0 +1,62 @@
+﻿<Page x:Class="kursachproj.Rez"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kursachproj"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="резюме">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Button FontSize="20" Height="50" Width="150" Margin="20,0,0,0" Content="Добавить" Grid.Row="2" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"></Button>
+        <Button FontSize="20" Height="50" Width="150" Margin="0,0,20,0" Content="Удалить" Grid.Row="2" HorizontalAlignment="Right" Name="BtnDelete" Click="BtnDelete_Click"></Button>
+        <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Grid.Row="0" RenderTransformOrigin="0.493,0.407" Width="1175">
+                <TextBlock FontSize="40" Text="Введите ФИО для поиска:" Width="500" Margin="0,0,0,0" TextAlignment="Right"></TextBlock>
+                <TextBox Width="692" x:Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"/>
+            </StackPanel>
+        </WrapPanel>
+
+
+        <ListView Grid.Row="1" Name="DGridRez" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="310"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Width="400" Grid.Row="2" HorizontalAlignment="Center" Margin="5">
+                            <Image.Source>
+                                <Binding Path="correctPhoto"></Binding>
+                            </Image.Source>
+                        </Image>
+                        <TextBlock Text="{Binding Mark}" VerticalAlignment="Center" TextAlignment="Center"  Margin="5 5" Grid.Row="0" Width="390"
+                                   TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="26"></TextBlock>
+                        <TextBlock Text="{Binding Model}" Grid.Row="1" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
+                        <TextBlock Text="{Binding Color}" Grid.Row="3" HorizontalAlignment="Left" FontSize="14"></TextBlock>
+                        <TextBlock Text="{Binding BodyNumber}" Grid.Row="3" HorizontalAlignment="Right" FontSize="14"></TextBlock>
+                        <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click" Grid.Row="4" HorizontalAlignment="Center"></Button>
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>

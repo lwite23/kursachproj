@@ -10,6 +10,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/bmain.jpg"/>
         </Grid.Background>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS"><Run Language="ru-ru" Text="Резюме"/></TextBlock>
+        <Grid  Panel.ZIndex="-2"></Grid>
+        <Grid Grid.Row="2" ></Grid>
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" x:Name="MainFrame"></Frame>
+        <Button FontSize="30" Content="Назад" Height="50" Width="150" Margin="0,0,20,0" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"></Button>
     </Grid>
 </Window>
