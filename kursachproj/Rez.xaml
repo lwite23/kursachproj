@@ -46,11 +46,11 @@
                                 <Binding Path="correctPhoto"></Binding>
                             </Image.Source>
                         </Image>
-                        <TextBlock Text="{Binding Mark}" VerticalAlignment="Center" TextAlignment="Center"  Margin="5 5" Grid.Row="0" Width="390"
+                        <TextBlock Text="{Binding FIO}" VerticalAlignment="Center" TextAlignment="Center"  Margin="5 5" Grid.Row="0" Width="390"
                                    TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="26"></TextBlock>
-                        <TextBlock Text="{Binding Model}" Grid.Row="1" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
-                        <TextBlock Text="{Binding Color}" Grid.Row="3" HorizontalAlignment="Left" FontSize="14"></TextBlock>
-                        <TextBlock Text="{Binding BodyNumber}" Grid.Row="3" HorizontalAlignment="Right" FontSize="14"></TextBlock>
+                        <TextBlock Text="{Binding God}" Grid.Row="1" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
+                        <TextBlock Text="{Binding Cpecial}" Grid.Row="3" HorizontalAlignment="Left" FontSize="14"></TextBlock>
+                        <TextBlock Text="{Binding Opit}" Grid.Row="3" HorizontalAlignment="Right" FontSize="14"></TextBlock>
                         <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click" Grid.Row="4" HorizontalAlignment="Center"></Button>
 
                     </Grid>
