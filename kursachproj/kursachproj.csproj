@@ -65,6 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppFr.cs" />
+    <Compile Include="edit.xaml.cs">
+      <DependentUpon>edit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="log.xaml.cs">
       <DependentUpon>log.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <DependentUpon>Vhod.xaml</DependentUpon>
     </Compile>
     <Page Include="Createacc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
