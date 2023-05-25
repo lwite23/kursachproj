@@ -35,20 +35,20 @@ namespace kursachproj
     {
         StringBuilder errors = new StringBuilder();
 
-        if (string.IsNullOrWhiteSpace(_currentqwe.Model))
-            errors.AppendLine("Укажите модель машины");
-        if (string.IsNullOrWhiteSpace(_currentqwe.Mark))
-            errors.AppendLine("Укажите марку машины");
-        if (string.IsNullOrWhiteSpace(_currentqwe.Color))
-            errors.AppendLine("Укажите цвет машины");
-        if (_currentqwe.BodyNumber == 0)
-            errors.AppendLine("Укажите номер кузова машины");
-        if (_currentqwe.PlateNumber == 0)
-            errors.AppendLine("Укажите номер кузова машины");
-        if (string.IsNullOrWhiteSpace(_currentqwe.TypeOfDrive))
-            errors.AppendLine("Укажите цвет машины");
-        if (string.IsNullOrWhiteSpace(_currentqwe.TransmissionType))
-            errors.AppendLine("Укажите цвет машины");
+        if (string.IsNullOrWhiteSpace(_currentqwe.FIO))
+            errors.AppendLine("Укажите ФИО");
+        if (string.IsNullOrWhiteSpace(_currentqwe.God))
+            errors.AppendLine("Укажите год рождения);
+        if (string.IsNullOrWhiteSpace(_currentqwe.Obraz))
+            errors.AppendLine("Укажите образование");
+        if (_currentqwe.Opit == 0)
+            errors.AppendLine("Укажите опыт работы");
+        if (_currentqwe.Dolj == 0)
+            errors.AppendLine("Укажите должность");
+        if (string.IsNullOrWhiteSpace(_currentqwe.Graj))
+            errors.AppendLine("Укажите гражданство");
+        if (string.IsNullOrWhiteSpace(_currentqwe.TipZan))
+            errors.AppendLine("Укажите тип занятости");
 
         if (errors.Length > 0)
         {
