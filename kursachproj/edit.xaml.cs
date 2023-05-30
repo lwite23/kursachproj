@@ -36,19 +36,19 @@ namespace kursachproj
         StringBuilder errors = new StringBuilder();
 
         if (string.IsNullOrWhiteSpace(_currentqwe.fullname))
-            errors.AppendLine("Укажите ФИО");
+            errors.AppendLine("Укажите ФИО.");
         if (string.IsNullOrWhiteSpace(_currentqwe.yearOfBirth))
-            errors.AppendLine("Укажите год рождения);
+            errors.AppendLine("Укажите год рождения.);
         if (string.IsNullOrWhiteSpace(_currentqwe.education))
-            errors.AppendLine("Укажите образование");
+            errors.AppendLine("Укажите образование.");
         if (_currentqwe.experience == 0)
-            errors.AppendLine("Укажите опыт работы");
+            errors.AppendLine("Укажите опыт работы.");
         if (_currentqwe.post == 0)
-            errors.AppendLine("Укажите должность");
+            errors.AppendLine("Укажите должность.");
         if (string.IsNullOrWhiteSpace(_currentqwe.citizenship))
-            errors.AppendLine("Укажите гражданство");
+            errors.AppendLine("Укажите гражданство.");
         if (string.IsNullOrWhiteSpace(_currentqwe.typeofemployment))
-            errors.AppendLine("Укажите тип занятости");
+            errors.AppendLine("Укажите тип занятости.");
 
         if (errors.Length > 0)
         {
