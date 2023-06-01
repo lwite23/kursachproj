@@ -29,8 +29,8 @@
             <TextBlock Margin="0,15,0,0" FontFamily="Calibri Bolt" Text="Введите пароль:" Grid.Column="1" Grid.Row="3" FontSize="20"></TextBlock>
         <TextBox x:Name="txbLogin" Grid.Column="1" Grid.Row="2"></TextBox>
         <PasswordBox x:Name="psbPassword" Grid.Column="1" Grid.Row="4"></PasswordBox>
-        <Button Content="Войти" Background="WhiteSmoke" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Left" Width="135" Height="40" Click="Button_Click"/>
-        <Button Content="Регистрация" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Right" Width="135" Height="40" Click="Registration_Click"/>
+            <Button Content="Войти" FontSize="18" Background="WhiteSmoke" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Left" Width="135" Height="40" Click="Button_Click"/>
+        <Button Content="Регистрация" FontSize="18" Grid.Column="1" Grid.Row="5" Margin="0,10,0,10" HorizontalAlignment="Right" Width="135" Height="40" Click="Registration_Click"/>
     </Grid>
     </Grid>
 </Page>
