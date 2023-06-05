@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -79,6 +80,24 @@
     </Compile>
     <Compile Include="Pageqe.xaml.cs">
       <DependentUpon>Pageqe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="qwe.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qwe.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qwe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qwe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qwe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>qwe.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="rez.cs">
+      <DependentUpon>qwe.tt</DependentUpon>
     </Compile>
     <Compile Include="Rez.xaml.cs">
       <DependentUpon>Rez.xaml</DependentUpon>
@@ -173,6 +192,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="qwe.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>qwe.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="qwe.edmx.diagram">
+      <DependentUpon>qwe.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -188,6 +214,17 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="qwe.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qwe.edmx</DependentUpon>
+      <LastGenOutput>qwe.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="qwe.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>qwe.edmx</DependentUpon>
+      <LastGenOutput>qwe.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\simp.jpg" />
     <Resource Include="Resources\bmain.jpg" />
     <Resource Include="Resources\back.jpg" />
   </ItemGroup>

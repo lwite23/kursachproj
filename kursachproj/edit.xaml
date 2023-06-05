@@ -39,7 +39,15 @@
         <TextBox MaxLength="6" Text="{Binding post}" Grid.Column="1" Grid.Row="4"></TextBox>
         <TextBox Text="{Binding citizenship}" Grid.Column="1" Grid.Row="5"></TextBox>
         <TextBox Text="{Binding typeofemployment}" Grid.Column="1" Grid.Row="6"></TextBox>
-        <TextBox Text="{Binding photo}" Grid.Column="1" Grid.Row="7"></TextBox>
+        <Image Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left" MouseLeftButtonUp="MouseLeftButtonUp_Click" Name="PhotoService">
+            <Image.Source>
+                <Binding Path="photo">
+                    <Binding.TargetNullValue>
+                        <ImageSource>Resources/simp.jpg</ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
         <Button FontSize="40" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="12" Name="BtnSave" Click="BtnSave_Click"></Button>
     </Grid>
 </Page>

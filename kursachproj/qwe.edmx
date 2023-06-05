@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище qweModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="rez">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="fullname" Type="nchar" MaxLength="300" />
+          <Property Name="yearOfBirth" Type="nchar" MaxLength="10" />
+          <Property Name="education" Type="nchar" MaxLength="300" />
+          <Property Name="experience" Type="nchar" MaxLength="300" />
+          <Property Name="post" Type="nchar" MaxLength="300" />
+          <Property Name="citizenship" Type="nchar" MaxLength="300" />
+          <Property Name="typeofemployment" Type="nchar" MaxLength="300" />
+          <Property Name="photo" Type="binary" MaxLength="999" />
+        </EntityType>
+        <EntityContainer Name="Хранилище qweModelContainer">
+          <EntitySet Name="rez" EntityType="Self.rez" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qweModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="rez">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fullname" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="yearOfBirth" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="education" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="experience" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="post" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="citizenship" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="typeofemployment" Type="String" MaxLength="300" FixedLength="true" Unicode="true" />
+          <Property Name="photo" Type="Binary" MaxLength="999" FixedLength="true" />
+        </EntityType>
+        <EntityContainer Name="qweEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="rez" EntityType="Self.rez" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище qweModelContainer" CdmEntityContainer="qweEntities1">
+          <EntitySetMapping Name="rez">
+            <EntityTypeMapping TypeName="qweModel.rez">
+              <MappingFragment StoreEntitySet="rez">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
+                <ScalarProperty Name="yearOfBirth" ColumnName="yearOfBirth" />
+                <ScalarProperty Name="education" ColumnName="education" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="post" ColumnName="post" />
+                <ScalarProperty Name="citizenship" ColumnName="citizenship" />
+                <ScalarProperty Name="typeofemployment" ColumnName="typeofemployment" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
