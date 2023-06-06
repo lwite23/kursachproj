@@ -12,7 +12,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="150"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="850"/>
             <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
         <TextBlock FontSize="56" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Comic Sans MS"><Run Language="ru-ru" Text="Резюме"/></TextBlock>

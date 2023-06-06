@@ -24,7 +24,7 @@ namespace kursachproj
         {
             InitializeComponent();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) 
         {
             try
             {
@@ -37,6 +37,7 @@ namespace kursachproj
                 else
                 {
                     MainWindow mainWindow = new MainWindow();
+       
                     switch (userObj.IdRole)
                     {
 
@@ -47,7 +48,7 @@ namespace kursachproj
                             mainWindow.Show();
                             break;
                         case 2:
-                            MessageBox.Show("Здравствуйте, Покупатель " + userObj.Name + "!",
+                            MessageBox.Show("Здравствуйте" + userObj.Name + "!",
                             "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                             mainWindow.Show();
                             break;
@@ -55,13 +56,19 @@ namespace kursachproj
                             MessageBox.Show("Данные не обнаружены!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
                             break;
                     }
+                
+                    Window.GetWindow(this).Close();
+
                 }
+
             }
             catch (Exception Ex)
             {
                 MessageBox.Show("Ошибка " + Ex.Message.ToString() + "Критическая работа приложения!",
                     "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            
+            
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)

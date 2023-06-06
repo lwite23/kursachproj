@@ -43,14 +43,17 @@
 
                         <Image Width="400" Grid.Row="2" HorizontalAlignment="Center" Margin="5">
                             <Image.Source>
-                                <Binding Path="correctPhoto"></Binding>
+                                <Binding Path="photo">
+                                    <Binding.TargetNullValue>
+                                        <ImageSource>Resources/simp.jpg</ImageSource>
+                                    </Binding.TargetNullValue>
+                                </Binding>
                             </Image.Source>
                         </Image>
                         <TextBlock Text="{Binding fullname}" VerticalAlignment="Center" TextAlignment="Center"  Margin="5 5" Grid.Row="0" Width="390"
                                    TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="26"></TextBlock>
                         <TextBlock Text="{Binding yearOfBirth}" Grid.Row="1" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
-                        <TextBlock Text="{Binding post}" Grid.Row="3" HorizontalAlignment="Left" FontSize="14"></TextBlock>
-                        <TextBlock Text="{Binding experience}" Grid.Row="3" HorizontalAlignment="Right" FontSize="14"></TextBlock>
+                        <TextBlock Text="{Binding post}" Grid.Row="3" HorizontalAlignment="Left" Margin="125 0 0 0" FontSize="26"></TextBlock>
                         <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click" Grid.Row="4" HorizontalAlignment="Center"></Button>
 
                     </Grid>

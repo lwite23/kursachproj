@@ -70,7 +70,7 @@ namespace kursachproj
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString());
+                //MessageBox.Show(ex.Message.ToString());
             }
         }
         private void MouseLeftButtonUp_Click(object sender, MouseButtonEventArgs e)

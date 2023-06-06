@@ -5,41 +5,38 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:kursachproj"
       mc:Ignorable="d" 
-      d:DesignHeight="920" d:DesignWidth="1780"
+      d:DesignHeight="850" d:DesignWidth="1920"
       Title="Резюме">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="358"/>
+            <RowDefinition Height="258"/>
+            <RowDefinition Height="158"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="350"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="450"/>
+            <ColumnDefinition Width="1470"/>
+
         </Grid.ColumnDefinitions>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="ФИО"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Год рождения" Grid.Row="1"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Образование" Grid.Row="2"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Опыт работы" Grid.Row="3"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Должность" Grid.Row="4"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Гражданство" Grid.Row="5"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Тип занятости" Grid.Row="6"></TextBlock>
-        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Фото" Grid.Row="7"></TextBlock>
-        <TextBox FontSize="40" Text="{Binding fullname}" Grid.Column="1"></TextBox>
-        <TextBox FontSize="40" Text="{Binding yearOfBirth}" Grid.Column="1" Grid.Row="1"></TextBox>
-        <TextBox FontSize="40" Text="{Binding education}" Grid.Column="1" Grid.Row="2"></TextBox>
-        <TextBox FontSize="40" Text="{Binding experience}" Grid.Column="1" Grid.Row="3"></TextBox>
-        <TextBox FontSize="40" Text="{Binding post}" Grid.Column="1" Grid.Row="4"></TextBox>
-        <TextBox FontSize="40" Text="{Binding citizenship}" Grid.Column="1" Grid.Row="5"></TextBox>
-        <TextBox FontSize="40" Text="{Binding typeofemployment}" Grid.Column="1" Grid.Row="6"></TextBox>
-        <Image Grid.Column="1" Grid.Row="9" HorizontalAlignment="Left" MouseLeftButtonUp="MouseLeftButtonUp_Click" Name="PhotoService">
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="ФИО" Grid.Column="1" Margin="204,29,0,0" Grid.Row="1"/>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Год рождения" Grid.Row="1" Grid.Column="1" Margin="118,101,0,0"></TextBlock>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Образование" Grid.Row="1" Grid.Column="1" Margin="132,179,0,0"></TextBlock>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Опыт работы" Grid.Row="1" Grid.Column="1" Margin="139,265,0,0"></TextBlock>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Должность" Grid.Row="2" Margin="159,24,0,0" Grid.Column="1"/>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Город" Grid.Row="2" Grid.Column="1" Margin="193,0,0,0"/>
+        <TextBlock FontSize="40" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Тип занятости" Grid.Row="2" Margin="105,183,0,0" Height="65" Grid.Column="1"/>
+        <TextBlock FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Фото"/>
+        <TextBox FontSize="22" Text="{Binding fullname}" Grid.Column="1" Margin="439,29,575,281" BorderBrush="Black" Background="White" Grid.Row="1"/>
+        <TextBox FontSize="22" Text="{Binding yearOfBirth}"  Grid.Column="1"  Margin="439,101,575,204" Grid.Row="1"/>
+        <TextBox FontSize="22" Text="{Binding education}"   Grid.Column="1" Grid.Row="1" Margin="439,179,575,127"/>
+        <TextBox FontSize="22" Text="{Binding experience}" Grid.Column="1" Grid.Row="1" Margin="439,259,575,33"/>
+        <TextBox FontSize="22" Text="{Binding post}"   Grid.Row="2" Margin="439,26,575,182" Grid.Column="1"/>
+        <TextBox FontSize="22" Text="{Binding citizenship}"  Grid.Row="2" Margin="439,103,575,103" Grid.Column="1"/>
+        <TextBox FontSize="22" Text="{Binding typeofemployment}"  Grid.Row="2" Margin="439,183,575,10" Grid.Column="1"/>
+        <Image Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" MouseLeftButtonUp="MouseLeftButtonUp_Click" Name="PhotoService">
             <Image.Source>
                 <Binding Path="photo">
                     <Binding.TargetNullValue>
@@ -48,6 +45,6 @@
                 </Binding>
             </Image.Source>
         </Image>
-        <Button FontSize="40" Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="12" Name="BtnSave" Click="BtnSave_Click"></Button>
+        <Button FontSize="40" Content="Сохранить" Grid.Row="3" Name="BtnSave" Click="BtnSave_Click" Margin="34,45,34,41"/>
     </Grid>
 </Page>
